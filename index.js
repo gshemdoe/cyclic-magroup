@@ -27,9 +27,9 @@ app.set('trust proxy', true)
 app.use(getRoutes)
 
 if (process.env.ENVIRONMENT == 'production') {
-    bots.myBotsFn()
+    
 }
-
+bots.myBotsFn()
 
 connectDB().then(() => {
     app.listen(process.env.PORT || 3000, () => console.log('Listen to port 3000'))
