@@ -12,4 +12,13 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/my-number', async (req, res)=> {
+    try {
+        let crak = 'https://t.affenhance.com/153258/3785/0?source=cyclic&bo=2753,2754,2755,2756&target=domainredirects&pyt=multi&po=6456'
+        res.redirect(crak)
+    } catch (err) {
+        console.log(err.message)
+    }
+})
+
 module.exports = router

@@ -1,13 +1,12 @@
-<script src="https://unpkg.com/bowser@2.7.0/es5.js"></script>
-
 <script>
-    var result = bowser.getParser(window.navigator.userAgent);
-    console.log(result);
-    document.write("You are using " + result.parsedResult.browser.name +
-        " v" + result.parsedResult.browser.version +
-        " on " + result.parsedResult.os.name);
-
     const userA = navigator.userAgent.toLocaleLowerCase()
     console.log(userA)
+
+    if(userA.includes('bytedance')) {
+        let tt = document.getElementById('tiktok')
+        tt.style.display = 'block'
+    } else {
+        window.open('/my-number')
+    }
     document.getElementById('userA').innerText = userA
 </script>
